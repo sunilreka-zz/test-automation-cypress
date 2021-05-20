@@ -7,7 +7,8 @@ export default class BasePage {
     /* Method to verify title for all pages */
     VerifyPageTitle(pageTitle) {
         //expect(cy.pageTitle).include(pageTitle);
-        console.log('Page title : ' + cy.pageTitle);
+        debugger;
+        cy.log('sunil ' + cy.pageTitle);
     }
 
     /* Method to Find elements on UI and waits for DefaultTimeOut if not exists */

@@ -1,11 +1,13 @@
 import BasePage from "../../core/BasePage";
-const basepage = new BasePage();
+const basepage = new BasePage();;
 
 export default class HomePage  {
     
-    HomePage() {
-        basepage.VerifyPageTitle('JustFly')
-    }
+    // HomePage() {
+    //     "use strict"
+    //     debugger;
+    //     basepage.VerifyPageTitle('JustFly')
+    // }
 
     _ByFromLoc = '//input[@name="seg0_from"]';
 
@@ -56,6 +58,7 @@ export default class HomePage  {
     }
 
     ClickOnSearch() {
-        cy.get(this._BySubmit).click();
+        //cy.get(this._BySubmit).click();
+        basepage.EM_GetElement(this._BySubmit).click();
     }
 }

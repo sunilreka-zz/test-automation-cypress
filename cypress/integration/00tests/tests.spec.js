@@ -1,13 +1,17 @@
 /// <reference types="cypress" />
-import HomePage from '../PageObjects/HomePage';
 require('cypress-xpath');
 import cyConfig from './../../../cypress.json'
+import BasePage from '../../core/BasePage';
+import HomePage from '../PageObjects/HomePage';
+
+//#region
+const homepage = new HomePage();
+//#endregion
 
 describe('Just Fly : Flight search', () => {
     it('Search for a flight', () => {
         cy.visit('https://www.justfly.com/', { timeout: cyConfig.defaultTimeOut });
-        const homepage = new HomePage();
-
+        
         //Enter From and To location
         homepage.EnterLocations('HYD', 'CDG');
 
